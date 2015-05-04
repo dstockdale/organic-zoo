@@ -1,4 +1,8 @@
 
+.taxonomy-root {
+  display: none;
+}
+
 // -- Spree Layout Custom Rules -------------------------
 
 .alert-notice { @extend .alert-success; }

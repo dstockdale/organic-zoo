@@ -2,34 +2,38 @@
   padding-top: 1em;
 }
 
-.main-nav a {
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 11px;
-  &:hover {
-    color: black;
-  }
-}
-
 .main-nav {
   display: block;
   width:100%;
   height:20px;
   text-align:center;
+  padding: 0;
+  margin: 0;
   li {
     display:inline-block;
     *display:inline; /*IE7*/
     *zoom:1; /*IE7*/
     margin-right: 10px;
   }
+  li:last-child {
+    margin-right: 0;
+  }
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 11px;
+    &:hover {
+      color: black;
+    }
+  }
 }
 
-.brand {
+.main-logo {
   display: block;
   text-align: center;
   img {
     display: block;
-    margin: auto;
+    margin: 10px auto;
   }
 }
 

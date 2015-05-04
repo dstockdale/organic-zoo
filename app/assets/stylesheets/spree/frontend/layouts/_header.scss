@@ -1,0 +1,63 @@
+.banner, .top-nav {
+  padding-top: 1em;
+}
+
+.main-nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 11px;
+  &:hover {
+    color: black;
+  }
+}
+
+.main-nav {
+  display: block;
+  width:100%;
+  height:20px;
+  text-align:center;
+  li {
+    display:inline-block;
+    *display:inline; /*IE7*/
+    *zoom:1; /*IE7*/
+    margin-right: 10px;
+  }
+}
+
+.brand {
+  display: block;
+  text-align: center;
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+.social a:hover {
+  background-color: transparent; 
+  opacity:0.1;
+} 
+
+.social img { 
+  -moz-transition: all 0.8s ease-in-out; 
+  -webkit-transition: all 0.8s ease-in-out; 
+  -o-transition: all 0.8s ease-in-out; 
+  -ms-transition: all 0.8s ease-in-out; 
+  transition: all 0.8s ease-in-out; 
+} 
+
+.social img:hover { 
+  -moz-transform: rotate(360deg); 
+  -webkit-transform: rotate(360deg); 
+  -o-transform: rotate(360deg); 
+  -ms-transform: rotate(360deg); 
+  transform: rotate(360deg); 
+}
+
+@media (min-width: $screen-md-min) {
+
+  .search-form {
+    float: right;
+  }
+
+}

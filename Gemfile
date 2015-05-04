@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 gem 'aws-sdk', '< 2.0'
+gem 'bootstrap-sass', '~> 3.3.1'
 
 group :production do
   gem 'newrelic_rpm'
@@ -52,4 +53,6 @@ gem 'spree', '3.0.0'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-0-stable'
+gem 'spree_multi_currency', github: 'spree-contrib/spree_multi_currency', branch: '3-0-stable'
+
 

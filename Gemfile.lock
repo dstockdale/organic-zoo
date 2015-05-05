@@ -28,6 +28,14 @@ GIT
       spree_core (~> 3.0.0.rc4)
 
 GIT
+  remote: git://github.com/spree-contrib/spree_reviews.git
+  revision: 664ed28313dca469ee39e7ca6ba9a6ac0df0d4eb
+  branch: 3-0-stable
+  specs:
+    spree_reviews (3.0.0.beta)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: 60d8a1b80d3fdfec61b5e8a199331601d33d59bd
   branch: 3-0-stable
@@ -530,6 +538,7 @@ DEPENDENCIES
   spree_i18n!
   spree_multi_currency!
   spree_paypal_express!
+  spree_reviews!
   spring
   spring-commands-rspec
   turbolinks

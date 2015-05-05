@@ -10,7 +10,20 @@
 .alert-alert { @extend .alert-info; }
 
 .product-body {
-  height: 170px;
+  height: 230px;
+  max-height: 230px;
+  overflow: hidden;
+}
+
+.product-footer {
+  height: 35px;
+  max-height: 35px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: normal;
+  text-overflow: ellipsis;
 }
 
 .progress-steps {
@@ -19,6 +32,16 @@
 
 h1 {
   margin-bottom: 30px;
+}
+
+h2.small-product-name {
+  overflow: hidden;
+  margin: 5px 0 0 0;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // Center cart line items

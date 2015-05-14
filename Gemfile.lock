@@ -1,22 +1,18 @@
 GIT
+  remote: git://github.com/mindvision/spree_slider.git
+  revision: db13cf362040ea1cd45439f540541626f9d0aa07
+  branch: 3-0-stable
+  specs:
+    spree_slider (1.2.0)
+      spree_core (>= 2.2)
+
+GIT
   remote: git://github.com/spree-contrib/better_spree_paypal_express.git
   revision: e5e769254f7cb461274bbcafe02f9b05bfb3d535
   branch: 3-0-stable
   specs:
     spree_paypal_express (3.0.0)
       paypal-sdk-merchant (= 1.106.1)
-      spree_core (~> 3.0.0)
-
-GIT
-  remote: git://github.com/spree-contrib/spree_i18n.git
-  revision: 0fda0166201f7cb441d5f7b66d8883899d20ecb6
-  branch: 3-0-stable
-  specs:
-    spree_i18n (3.0.0)
-      friendly_id-globalize
-      globalize (~> 5.0.1)
-      i18n_data (~> 0.5.1)
-      rails-i18n (~> 4.0.1)
       spree_core (~> 3.0.0)
 
 GIT
@@ -54,6 +50,17 @@ GIT
   specs:
     spree_gateway (3.0.0.beta)
       spree_core (~> 3.0.0.beta)
+
+PATH
+  remote: ../spree_i18n
+  specs:
+    spree_i18n (3.0.0)
+      friendly_id-globalize
+      globalize (~> 5.0.1)
+      i18n_data (~> 0.5.1)
+      kaminari-i18n (~> 0.3.2)
+      rails-i18n (~> 4.0.1)
+      spree_core (~> 3.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -235,6 +242,9 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    kaminari-i18n (0.3.2)
+      kaminari
+      rails
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (2.10.0)
@@ -519,6 +529,7 @@ DEPENDENCIES
   launchy
   newrelic_rpm
   pg
+  pry
   puma
   quiet_assets
   rails (= 4.2.0)
@@ -539,6 +550,7 @@ DEPENDENCIES
   spree_multi_currency!
   spree_paypal_express!
   spree_reviews!
+  spree_slider!
   spring
   spring-commands-rspec
   turbolinks

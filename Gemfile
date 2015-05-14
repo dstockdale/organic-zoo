@@ -45,6 +45,7 @@ group :development, :test do
   gem 'spring'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'pry'
 end
 
 gem 'rails_12factor', group: :production
@@ -52,9 +53,9 @@ gem 'rails_12factor', group: :production
 gem 'spree', '3.0.0'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
-gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-0-stable'
+gem 'spree_i18n', github: 'dstockdale/spree_i18n', branch: '3-0-stable'
 gem 'spree_multi_currency', github: 'spree-contrib/spree_multi_currency', branch: '3-0-stable'
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '3-0-stable'
 gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: '3-0-stable'
-
+gem 'spree_slider', github: 'mindvision/spree_slider', branch: '3-0-stable'
 

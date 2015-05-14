@@ -1,4 +1,17 @@
 GIT
+  remote: git://github.com/dstockdale/spree_i18n.git
+  revision: 7b9c5db86e69ca6062709deeeefc8d09d95e6630
+  branch: 3-0-stable
+  specs:
+    spree_i18n (3.0.0)
+      friendly_id-globalize
+      globalize (~> 5.0.1)
+      i18n_data (~> 0.5.1)
+      kaminari-i18n (~> 0.3.2)
+      rails-i18n (~> 4.0.1)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/mindvision/spree_slider.git
   revision: db13cf362040ea1cd45439f540541626f9d0aa07
   branch: 3-0-stable
@@ -50,17 +63,6 @@ GIT
   specs:
     spree_gateway (3.0.0.beta)
       spree_core (~> 3.0.0.beta)
-
-PATH
-  remote: ../spree_i18n
-  specs:
-    spree_i18n (3.0.0)
-      friendly_id-globalize
-      globalize (~> 5.0.1)
-      i18n_data (~> 0.5.1)
-      kaminari-i18n (~> 0.3.2)
-      rails-i18n (~> 4.0.1)
-      spree_core (~> 3.0.0)
 
 GEM
   remote: https://rubygems.org/

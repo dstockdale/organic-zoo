@@ -13,3 +13,4 @@
 //= require spree/frontend/spree_multi_currency
 //= require spree/frontend/spree_paypal_express
 //= require spree/frontend/spree_reviews
+//= require js/jquery.cycle2

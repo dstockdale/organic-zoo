@@ -1,0 +1,6 @@
+<!-- insert_after '#nav-bar' -->
+<div class="row">
+  <div class="col-sm-12">
+    <%= render "spree/shared/mini_search" %>
+  </div>
+</div>

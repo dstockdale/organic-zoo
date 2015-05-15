@@ -1,0 +1,2 @@
+<!-- replace '#main-nav-bar' -->
+<%= render "spree/shared/oz_nav_bar" %>

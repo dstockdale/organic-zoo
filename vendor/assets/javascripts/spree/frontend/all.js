@@ -7,10 +7,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require spree/frontend
-
-//= require_tree .
+//= require jquery.hoverintent
+//= require superfish
 //= require spree/frontend/spree_i18n
 //= require spree/frontend/spree_multi_currency
 //= require spree/frontend/spree_paypal_express
 //= require spree/frontend/spree_reviews
 //= require js/jquery.cycle2
+//= require spree/frontend/app

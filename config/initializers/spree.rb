@@ -14,7 +14,6 @@ Spree.config do |config|
   # Uncomment to stop tracking inventory levels in the application
   config.track_inventory_levels = false
   config.max_level_in_taxons_menu = 4
-  config.site_name = "OrganicZoo"
 end
 
 Spree.user_class = "Spree::User"

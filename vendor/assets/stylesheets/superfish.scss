@@ -56,12 +56,13 @@
 	text-decoration: none;
   color: $link-color;
 	zoom: 1; /* IE7 */
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .sf-menu a:hover,
 .sfHover a.sf-with-ul {
   color: $link-hover-color;
-  text-decoration: $link-hover-decoration;
 }
 
 .sf-menu > li a {
@@ -70,6 +71,7 @@
 
 .sf-menu li li a {
   padding: .55em 1em;
+  text-transform: none;
   &:hover {
     text-decoration: none;
   }

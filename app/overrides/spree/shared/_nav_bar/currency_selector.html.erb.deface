@@ -1,0 +1,16 @@
+<!-- insert_top '#nav-bar' -->
+<% if Spree::Config[:allow_currency_change] && Spree::Config[:show_currency_selector] && supported_currencies.size > 1 %>
+  <div id="currency-selector" class="btn-group" role="group" data-hook>
+    <div class="dropdown">
+      <button class="btn btn-sm btn-default dropdown-toggle" type="button" id="currency_dropdown" data-toggle="dropdown" aria-expanded="false">
+        <%= current_currency_label %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="currency_dropdown">
+        <%- supported_currencies.each do |currency| -%>
+          <li><%= link_to("#{currency.symbol} (#{currency.iso_code})", set_currency_path(format: :json), data: { currency: currency.iso_code }) %></li>
+        <%- end -%>
+      </ul>
+    </div>
+  </div>
+<% end %>

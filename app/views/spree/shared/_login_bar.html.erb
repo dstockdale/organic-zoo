@@ -1,0 +1,18 @@
+<% if spree_current_user %>
+  <div id="link-to-login" class="btn-group" role="group" data-hook>
+    <div class="dropdown">
+      <button class="btn btn-sm btn-default dropdown-toggle" type="button" id="account_dropdown" data-toggle="dropdown" aria-expanded="false">
+        <span data-toggle="tooltip" data-placement="bottom" title="<%= spree_current_user.email %>">
+          <%= truncate spree_current_user.email, { length: 12 } %>
+        </span>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="account_dropdown">
+        <li><%= link_to Spree.t(:my_account), spree.account_path %></li>
+        <li><%= link_to Spree.t(:logout), spree.logout_path %></li>
+      </ul>
+    </div>    
+  </div>
+<% else %>
+  <%= link_to(Spree.t(:login), spree.login_path, {class: "btn btn-sm btn-default", id: "link-to-login"}) %>
+<% end %>

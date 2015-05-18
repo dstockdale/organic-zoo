@@ -1,0 +1,16 @@
+<!-- insert_top '#nav-bar' -->
+<% if SpreeI18n::Config.supported_locales.size > 1 %>
+  <div id="locale-selector" class="btn-group" role="group" data-hook>
+    <div class="dropdown">
+      <button class="btn btn-sm btn-default dropdown-toggle" type="button" id="locale_dropdown" data-toggle="dropdown" aria-expanded="false">
+        <%= current_locale %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="locale_dropdown">
+        <% locale_option_links.each do |link| %>
+          <li role="presentation"><%= link %></li>
+        <% end %>
+      </ul>
+    </div>    
+  </div>
+<% end %>

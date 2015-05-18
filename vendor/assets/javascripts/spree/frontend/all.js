@@ -10,7 +10,7 @@
 //= require jquery.hoverintent
 //= require superfish
 //= require spree/frontend/spree_i18n
-//= require spree/frontend/spree_multi_currency
+//= require spree/frontend/spree_multi_currency_dropdown
 //= require spree/frontend/spree_paypal_express
 //= require spree/frontend/spree_reviews
 //= require js/jquery.cycle2

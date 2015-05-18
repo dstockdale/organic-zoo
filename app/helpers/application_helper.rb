@@ -12,5 +12,33 @@ module ApplicationHelper
       end.join("\n").html_safe
     end
   end
-  
+
+  def current_locale
+    "#{Spree.t(:'i18n.this_file_language', locale: I18n.locale )}"
+  end
+
+  def current_currency_label
+    currency = ::Money::Currency.find(current_currency.strip)
+    "#{currency.symbol} (#{currency.iso_code})"
+  end
+
+  def locale_option_links
+    supported_locales_options.map do |locale|
+      url = URI.parse(request.original_url)
+      path = url.path.split("/")
+      path.shift
+
+      if SpreeI18n::Config.supported_locales.map(&:to_s).include?(path[0])
+        path[0] = locale[1].to_s
+        path.unshift('')
+      else
+        path.unshift('',locale[1])
+      end  
+      
+      url.path = path.join("/")
+      
+      link_to locale[0], url.to_s
+    end
+  end
+
 end

@@ -13,6 +13,22 @@ module ApplicationHelper
     end
   end
 
+  def cycle_thumb(product)
+    if product.images.size > 2
+      small_image(product, itemprop: "image", class: "img-responsive")
+    else
+      thumbs = product.images.map do |img|
+        img.attachment.url(:small)
+      end
+      first_thumb = thumbs.shift
+      thumbs.push(first_thumb)
+
+      image_tag(first_thumb, itemprop: "image", class: "img-responsive cycle-thumb", data: {
+        thumbs: thumbs
+      }, alt: product.name)
+    end
+  end
+
   def current_locale
     "#{Spree.t(:'i18n.this_file_language', locale: I18n.locale )}"
   end

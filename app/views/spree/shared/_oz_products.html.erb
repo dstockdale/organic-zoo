@@ -4,11 +4,10 @@
     <div id="product_<%= product.id %>" class="col-md-3 col-sm-6 product-list-item" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
       <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
         <div class="text-center product-body">
-          <%= link_to small_image(product, itemprop: "image", class: "img-responsive"), url, itemprop: 'url' %><br/>
-          <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
+          <%= link_to cycle_thumb(product), url, itemprop: 'url' %><br/>
         </div>
         <div class="product-footer">
-          <h2 class="small-product-name"><%= product.name %></h2>
+          <h2 class="small-product-name"><%= link_to truncate(product.name, length: 50), url, itemprop: "name", title: product.name %></h2>
           <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             <span class="price" itemprop="price"><%= display_price(product) %></span>
           </span>

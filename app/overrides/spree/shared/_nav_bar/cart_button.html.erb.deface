@@ -1,0 +1,4 @@
+<!-- insert_bottom '#nav-bar' -->
+<div id="link-to-cart" class="btn-group" role="group" data-hook>
+  <%= link_to_cart %>
+</div>

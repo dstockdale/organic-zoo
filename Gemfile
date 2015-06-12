@@ -57,5 +57,12 @@ gem 'spree_i18n', github: 'dstockdale/spree_i18n', branch: '3-0-stable'
 gem 'spree_multi_currency', github: 'spree-contrib/spree_multi_currency', branch: '3-0-stable'
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '3-0-stable'
 gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: '3-0-stable'
-gem 'spree_slider', github: 'mindvision/spree_slider', branch: '3-0-stable'
+gem 'spree_summernote', '~> 3.0.1'
+# gem 'spree_summernote', github: 'dstockdale/spree_summernote', branch: '3-0-stable'
+gem 'spree_content', github: 'dstockdale/spree_content', branch: '3-0-stable'
+gem 'spree_fairground', github: 'dstockdale/spree_fairground', branch: '3-0-stable'
+
+# gem 'spree_summernote', path: '../spree_summernote'
+# gem 'spree_content', path: '../spree_content'
+# gem 'spree_fairground', path: '../spree_fairground'
 

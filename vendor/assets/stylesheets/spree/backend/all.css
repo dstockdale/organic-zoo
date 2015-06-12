@@ -7,5 +7,7 @@
  *= require_self
  *= require_tree .
  *= require spree/backend/spree_i18n
- *= require css/slider
+ *= require spree/backend/spree_content
+ *= require spree/backend/spree_summernote
+ *= require spree/backend/spree_fairground
 */

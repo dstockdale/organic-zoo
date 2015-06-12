@@ -13,5 +13,6 @@
 //= require spree/frontend/spree_multi_currency_dropdown
 //= require spree/frontend/spree_paypal_express
 //= require spree/frontend/spree_reviews
-//= require js/jquery.cycle2
 //= require spree/frontend/app
+//= require spree/frontend/spree_content
+//= require spree/frontend/spree_fairground

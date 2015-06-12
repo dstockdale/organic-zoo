@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150512051137) do
+ActiveRecord::Schema.define(version: 20150611154246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,6 +82,42 @@ ActiveRecord::Schema.define(version: 20150512051137) do
   add_index "spree_adjustments", ["order_id"], name: "index_spree_adjustments_on_order_id", using: :btree
   add_index "spree_adjustments", ["source_id", "source_type"], name: "index_spree_adjustments_on_source_id_and_source_type", using: :btree
 
+  create_table "spree_arrangement_translations", force: :cascade do |t|
+    t.integer  "spree_arrangement_id"
+    t.string   "locale"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+    t.string   "description"
+    t.string   "keywords"
+    t.string   "title"
+    t.text     "body"
+  end
+
+  add_index "spree_arrangement_translations", ["locale"], name: "index_spree_arrangement_translations_on_locale", using: :btree
+  add_index "spree_arrangement_translations", ["spree_arrangement_id"], name: "index_spree_arrangement_translations_on_spree_arrangement_id", using: :btree
+
+  create_table "spree_arrangements", force: :cascade do |t|
+    t.string   "slug"
+    t.integer  "subject_id"
+    t.string   "context"
+    t.string   "ancestry"
+    t.integer  "position"
+    t.string   "description"
+    t.string   "keywords"
+    t.string   "title"
+    t.text     "body"
+    t.string   "target"
+    t.boolean  "visible",     default: true
+    t.datetime "deleted_at"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "spree_arrangements", ["ancestry"], name: "index_spree_arrangements_on_ancestry", using: :btree
+  add_index "spree_arrangements", ["deleted_at"], name: "index_spree_arrangements_on_deleted_at", using: :btree
+  add_index "spree_arrangements", ["slug"], name: "index_spree_arrangements_on_slug", using: :btree
+
   create_table "spree_assets", force: :cascade do |t|
     t.integer  "viewable_id"
     t.string   "viewable_type"
@@ -122,6 +158,14 @@ ActiveRecord::Schema.define(version: 20150512051137) do
   add_index "spree_calculators", ["calculable_id", "calculable_type"], name: "index_spree_calculators_on_calculable_id_and_calculable_type", using: :btree
   add_index "spree_calculators", ["id", "type"], name: "index_spree_calculators_on_id_and_type", using: :btree
 
+  create_table "spree_carousels", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "spree_carousels", ["name"], name: "index_spree_carousels_on_name", unique: true, using: :btree
+
   create_table "spree_countries", force: :cascade do |t|
     t.string   "iso_name"
     t.string   "iso"
@@ -158,6 +202,33 @@ ActiveRecord::Schema.define(version: 20150512051137) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
+
+  create_table "spree_fairground_carousels", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "spree_fairground_carousels", ["name"], name: "index_spree_fairground_carousels_on_name", unique: true, using: :btree
+
+  create_table "spree_fairground_slides", force: :cascade do |t|
+    t.integer  "attachment_width"
+    t.integer  "attachment_height"
+    t.integer  "attachment_file_size"
+    t.integer  "position"
+    t.string   "attachment_content_type"
+    t.string   "attachment_file_name"
+    t.datetime "attachment_updated_at"
+    t.string   "alt"
+    t.integer  "carousel_id"
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.string   "link"
+    t.text     "body"
+    t.string   "slide_type",              default: "image"
+  end
+
+  add_index "spree_fairground_slides", ["slide_type"], name: "index_spree_fairground_slides_on_slide_type", using: :btree
 
   create_table "spree_feedback_reviews", force: :cascade do |t|
     t.integer  "user_id"

@@ -1,3 +1,5 @@
 /*
-*= require spree/frontend/main
+ *= require spree/frontend/main
+ *= require spree/frontend/spree_content
+ *= require spree/frontend/spree_fairground
 */

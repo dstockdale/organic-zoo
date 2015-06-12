@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: SpreeI18n::Routes.supported_locales do
     mount Spree::Core::Engine, :at => '/'
+    get '*path', to: 'spree/static_contents#show'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

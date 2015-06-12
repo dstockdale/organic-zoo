@@ -1,4 +1,26 @@
 GIT
+  remote: git://github.com/dstockdale/spree_content.git
+  revision: 513b0adb4af134f854ab06f1d2b30aadea7f60d7
+  branch: 3-0-stable
+  specs:
+    spree_content (3.0.0.pre.beta)
+      spree_api (~> 3.0.0)
+      spree_backend (~> 3.0.0)
+      spree_core (~> 3.0.0)
+      spree_frontend (~> 3.0.0)
+
+GIT
+  remote: git://github.com/dstockdale/spree_fairground.git
+  revision: 5688c501053c2fffa14441d302cff9e21cb284c5
+  branch: 3-0-stable
+  specs:
+    spree_fairground (3.0.0)
+      spree_api (~> 3.0.0)
+      spree_backend (~> 3.0.0)
+      spree_core (~> 3.0.0)
+      spree_frontend (~> 3.0.0)
+
+GIT
   remote: git://github.com/dstockdale/spree_i18n.git
   revision: 7b9c5db86e69ca6062709deeeefc8d09d95e6630
   branch: 3-0-stable
@@ -10,14 +32,6 @@ GIT
       kaminari-i18n (~> 0.3.2)
       rails-i18n (~> 4.0.1)
       spree_core (~> 3.0.0)
-
-GIT
-  remote: git://github.com/mindvision/spree_slider.git
-  revision: db13cf362040ea1cd45439f540541626f9d0aa07
-  branch: 3-0-stable
-  specs:
-    spree_slider (1.2.0)
-      spree_core (>= 2.2)
 
 GIT
   remote: git://github.com/spree-contrib/better_spree_paypal_express.git
@@ -107,11 +121,11 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    acts_as_list (0.6.0)
+    acts_as_list (0.7.2)
       activerecord (>= 3.0)
     addressable (2.3.8)
     arel (6.0.0)
-    autoprefixer-rails (5.1.8)
+    autoprefixer-rails (5.2.0)
       execjs
       json
     awesome_nested_set (3.0.2)
@@ -136,7 +150,7 @@ GEM
       columnize (= 0.9.0)
     camertron-eprun (1.1.0)
     cancancan (1.10.1)
-    canonical-rails (0.0.8)
+    canonical-rails (0.0.9)
       rails (>= 3.1, < 5.0)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -163,7 +177,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1)
-    colorize (0.7.5)
+    colorize (0.7.7)
     columnize (0.9.0)
     css_parser (1.3.6)
       addressable
@@ -185,7 +199,7 @@ GEM
       devise (>= 2.1.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
-    execjs (2.4.0)
+    execjs (2.5.2)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.5.0)
@@ -202,7 +216,7 @@ GEM
       activerecord (>= 4.0.0)
     friendly_id-globalize (1.0.0.alpha1)
       friendly_id (>= 5.0.0.beta4, < 6.0)
-    globalid (0.3.3)
+    globalid (0.3.5)
       activesupport (>= 4.1.0)
     globalize (5.0.1)
       activemodel (>= 4.2.0, < 4.3)
@@ -226,10 +240,9 @@ GEM
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
     highline (1.6.21)
-    hike (1.2.3)
     hitimes (1.2.2)
     htmlentities (4.3.3)
-    httparty (0.13.3)
+    httparty (0.13.5)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
@@ -238,9 +251,9 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (5.0.3)
+    jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
-    json (1.8.2)
+    json (1.8.3)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -253,16 +266,16 @@ GEM
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-    loofah (2.0.1)
+    loofah (2.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
-    mime-types (2.4.3)
+    mime-types (2.6.1)
     mini_portile (0.6.2)
-    minitest (5.5.1)
-    monetize (1.1.0)
+    minitest (5.7.0)
+    monetize (1.3.0)
       money (~> 6.5.0)
     money (6.5.1)
       i18n (>= 0.6.4, <= 0.7.0)
@@ -276,12 +289,12 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
-    paperclip (4.2.1)
+    paperclip (4.2.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    paranoia (2.1.1)
+    paranoia (2.1.2)
       activerecord (~> 4.0)
     paypal-sdk-core (0.2.10)
       multi_json (~> 1.0)
@@ -289,13 +302,13 @@ GEM
     paypal-sdk-merchant (1.106.1)
       paypal-sdk-core (~> 0.2.3)
     pg (0.18.1)
-    polyamorous (1.1.0)
+    polyamorous (1.2.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
     premailer (1.8.4)
       css_parser (>= 1.3.6)
       htmlentities (>= 4.0.0)
-    premailer-rails (1.8.0)
+    premailer-rails (1.8.2)
       actionmailer (>= 3, < 5)
       premailer (~> 1.7, >= 1.7.9)
     pry (0.10.1)
@@ -308,7 +321,7 @@ GEM
       railties (>= 3.1, < 5.0)
     rabl (0.9.4.pre1)
       activesupport (>= 2.3.14)
-    rack (1.6.0)
+    rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.0)
@@ -381,7 +394,7 @@ GEM
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
     rubyzip (1.1.7)
-    sass (3.4.13)
+    sass (3.4.14)
     sass-rails (5.0.2)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
@@ -457,15 +470,15 @@ GEM
       sprockets-rails (~> 2.2)
     spree_sample (3.0.0)
       spree_core (= 3.0.0)
+    spree_summernote (3.0.1)
+      spree_backend (~> 3.0.0)
+      spree_core (~> 3.0.0)
     spring (1.3.3)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    sprockets (2.12.3)
-      hike (~> 1.2)
-      multi_json (~> 1.0)
+    sprockets (3.2.0)
       rack (~> 1.0)
-      tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.2.4)
+    sprockets-rails (2.3.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
@@ -547,12 +560,14 @@ DEPENDENCIES
   shoulda-matchers
   spree (= 3.0.0)
   spree_auth_devise!
+  spree_content!
+  spree_fairground!
   spree_gateway!
   spree_i18n!
   spree_multi_currency!
   spree_paypal_express!
   spree_reviews!
-  spree_slider!
+  spree_summernote (~> 3.0.1)
   spring
   spring-commands-rspec
   turbolinks

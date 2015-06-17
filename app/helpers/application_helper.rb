@@ -1,5 +1,19 @@
 module ApplicationHelper
 
+  def oz_breadcrumbs(taxon, product=false)
+    return "" if current_page?("/") || taxon.nil?
+    crumbs = [content_tag(:li, content_tag(:span, link_to(Spree.t(:home), spree.root_path, itemprop: "url"), itemprop: "title"), itemscope: "itemscope", itemtype: "http://data-vocabulary.org/Breadcrumb")]
+    if taxon
+      crumbs << taxon.ancestors.collect { |ancestor| content_tag(:li, content_tag(:span, link_to(ancestor.name , seo_url(ancestor), itemprop: "url"), itemprop: "title"), itemscope: "itemscope", itemtype: "http://data-vocabulary.org/Breadcrumb") } unless taxon.ancestors.empty?
+      crumbs << content_tag(:li, content_tag(:span, link_to(taxon.name , seo_url(taxon), itemprop: "url"), itemprop: "title"), class: 'active', itemscope: "itemscope", itemtype: "http://data-vocabulary.org/Breadcrumb")
+    else
+      crumbs << content_tag(:li, content_tag(:span, Spree.t(:products), itemprop: "title"), class: 'active', itemscope: "itemscope", itemtype: "http://data-vocabulary.org/Breadcrumb")
+    end
+
+    crumb_list = content_tag(:ol, raw(crumbs.flatten.map{|li| li.mb_chars}.join), class: 'breadcrumb')
+    content_tag(:nav, crumb_list, id: 'breadcrumbs', class: 'col-md-12')
+  end
+
   def taxons_navbar(root_taxon, current_taxon, max_level = 3, root = true)
     return '' if max_level < 1 || root_taxon.leaf?
     root_class = root ? 'sf-menu' : nil

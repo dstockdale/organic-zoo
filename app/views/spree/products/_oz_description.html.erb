@@ -1,0 +1,15 @@
+<h1 class="product-title" itemprop="name">
+  <%= @product.name %> 
+  <span class="price selling" itemprop="price">
+    <%= display_price(@product) %>
+  </span>
+  <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
+</h1>
+
+<div class="product-description" itemprop="description" data-hook="description">
+  <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+</div>
+
+<div id="cart-form" data-hook="cart_form">
+  <%= render :partial => 'oz_cart_form' %>
+</div>

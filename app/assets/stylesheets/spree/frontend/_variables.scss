@@ -13,3 +13,8 @@ $font-size-base: 12px;
 // Large screen / wide desktop same as normal desktop
 $grid-gutter-width:         30px;
 $container-large-desktop:   (940px + $grid-gutter-width);
+
+$breadcrumb-separator: ">";
+$breadcrumb-bg: transparent;
+
+// $border-radius-base: 0;

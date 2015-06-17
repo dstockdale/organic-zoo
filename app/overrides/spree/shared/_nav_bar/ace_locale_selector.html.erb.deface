@@ -1,4 +1,4 @@
-<!-- insert_top '#nav-bar' -->
+<!-- insert_top '#nav-bar' original 'a1c911085800d0ef51c200ca8d6f362235c90bf0' -->
 <% if SpreeI18n::Config.supported_locales.size > 1 %>
   <div id="locale-selector" class="btn-group" role="group" data-hook>
     <div class="dropdown">

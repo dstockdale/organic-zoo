@@ -1,4 +1,4 @@
-<!-- insert_after '#nav-bar' -->
+<!-- insert_after '#nav-bar' original '4d80324d85e037205fad61d5e9410e2a523257d6' -->
 <div class="row">
   <div class="col-sm-12">
     <%= render "spree/shared/mini_search" %>

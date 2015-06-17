@@ -27,7 +27,7 @@
     <% end %>
 
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
-      <div data-hook="product_price" class="row">
+      <div data-hook="product_price">
         <div class="col-md-6">
           <div id="product-price">
             <% if @product.master.can_supply? %>

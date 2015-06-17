@@ -7,4 +7,5 @@
  *= require spree/frontend/spree_i18n
  *= require spree/frontend/spree_content
  *= require spree/frontend/spree_fairground
+ *= require spree/frontend/spree_reviews
 */

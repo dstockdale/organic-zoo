@@ -1,0 +1,165 @@
+@import "bootstrap-sprockets";
+@import "variables";
+@import "bootstrap";
+@import "superfish";
+@import url("http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext");
+
+// Globals
+h1 {
+  font-size: 16px;
+  color: #999;
+  padding-left: 10px;
+}
+
+.input-group-xs>.form-control,
+.input-group-xs>.input-group-addon,
+.input-group-xs>.input-group-btn>.btn {
+  height: 22px;
+  padding: 2px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+// Comments
+.comment-list {
+  @include list-unstyled;
+}
+.comment-list ol {
+  list-style: none;
+}
+.comment-form p {
+  @extend .form-group;
+}
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  @extend .form-control;
+}
+.comment-form input[type="submit"] {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+
+// Grid system
+.main {
+  @include make-sm-column($main-sm-columns);
+  .sidebar-primary & {
+    @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
+  }
+}
+.sidebar {
+  @include make-sm-column($sidebar-sm-columns);
+}
+
+
+// -- Spree specifics -------------------------
+
+.taxonomy-root {
+  display: none;
+}
+
+#nav-bar {
+  .btn-sm {
+    border-radius: 0;
+    border: none;
+    padding: 3px 10px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+
+  #top-nav-bar {
+    padding-top: 10px;
+  }
+
+  .search-form {
+    float: right;
+  }
+
+}
+
+// -- Spree Layout Custom Rules -------------------------
+
+.alert-notice { @extend .alert-success; }
+.alert-error, .alert-registration_error { @extend .alert-danger; }
+.alert-alert { @extend .alert-info; }
+
+.product-body {
+  height: 230px;
+  max-height: 230px;
+  overflow: hidden;
+}
+
+.product-footer {
+  height: 35px;
+  max-height: 35px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+}
+
+.progress-steps {
+  margin-top: $line-height-computed;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+h2.small-product-name {
+  overflow: hidden;
+  margin: 5px 0 0 0;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Center cart line items
+table {
+  &.table > tbody > tr {
+    &.line-item td, &.stock-item td {
+      vertical-align: middle;
+    }
+  }
+
+  &#line-items {
+    > tbody, > tfoot {
+      > tr > td {
+        vertical-align: middle;
+
+        &.order-qty {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+footer.content-info {
+  color: #999;
+}
+
+#footer-left a {
+  color: lighten($brand-primary, 20);
+
+  &:hover {
+    color: lighten($brand-primary, 10);
+  }
+}
+
+// Updated credit-card image
+#credit-card-image {
+  margin-top: -10px;
+}
+
+.existing-credit-card-list td {
+  padding: 5px;
+}

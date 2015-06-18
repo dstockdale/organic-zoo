@@ -1,0 +1,2 @@
+<!-- insert_bottom '#cart-form' -->
+<%= render partial: 'spree/products/share' %>

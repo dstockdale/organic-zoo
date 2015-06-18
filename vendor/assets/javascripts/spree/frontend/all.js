@@ -16,3 +16,4 @@
 //= require spree/frontend/app
 //= require spree/frontend/spree_content
 //= require spree/frontend/spree_fairground
+//= require spree/frontend/spree_variant_options

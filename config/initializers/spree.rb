@@ -18,3 +18,6 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
+
+SpreeVariantOptions::VariantConfig.allow_select_outofstock = true
+SpreeVariantOptions::VariantConfig.default_instock = true

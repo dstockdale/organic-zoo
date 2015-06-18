@@ -8,4 +8,5 @@
  *= require spree/frontend/spree_content
  *= require spree/frontend/spree_fairground
  *= require spree/frontend/spree_reviews
+ *= require organiczoo/spree_variant_options
 */

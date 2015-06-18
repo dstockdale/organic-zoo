@@ -1,0 +1,2 @@
+<!-- insert_after '#cart-form' -->
+<%= render partial: 'spree/shared/reviews' %>

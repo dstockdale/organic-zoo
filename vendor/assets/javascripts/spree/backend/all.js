@@ -16,3 +16,4 @@
 //= require spree/backend/spree_content
 //= require spree/backend/spree_summernote
 //= require spree/backend/spree_fairground
+//= require spree/backend/spree_variant_options

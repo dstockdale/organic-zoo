@@ -17,7 +17,7 @@ Deface::Override.new(
 Deface::Override.new(
   virtual_path: "spree/products/show",
   set_attributes: "#main-image",
-  attributes: { class: "panel" },
+  attributes: { class: "main-image" },
   name: "spree_detail_main_image",
   original: "8765c76bd20d115a2cf166822487adce87c82c21"
 )

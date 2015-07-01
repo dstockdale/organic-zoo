@@ -3,10 +3,9 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *
- *= require spree/frontend
+ *= require spree/frontend/frontend_bootstrap
  *= require spree/frontend/spree_i18n
  *= require spree/frontend/spree_content
  *= require spree/frontend/spree_fairground
  *= require spree/frontend/spree_reviews
- *= require organiczoo/spree_variant_options
 */

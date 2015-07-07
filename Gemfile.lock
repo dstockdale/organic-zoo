@@ -226,6 +226,7 @@ GEM
     dotenv (2.0.1)
     dotenv-rails (2.0.1)
       dotenv (= 2.0.1)
+    envyable (0.2.0)
     erubis (2.7.0)
     execjs (2.5.2)
     factory_girl (4.5.0)
@@ -558,6 +559,7 @@ DEPENDENCIES
   database_cleaner
   deface!
   dotenv-rails
+  envyable
   factory_girl_rails
   foreman
   guard-bundler

@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 
 group :production do
   gem 'newrelic_rpm'
+  gem 'envyable'
 end
 
 group :development do

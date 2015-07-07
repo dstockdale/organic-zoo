@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+# ruby '2.2.0'
 
 gem 'rails', '4.2.0'
 gem 'pg'
@@ -42,14 +42,14 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  gem 'spring'
+  # gem 'spring'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'pry'
   gem 'dotenv-rails'
 end
 
-gem 'rails_12factor', group: :production
+# gem 'rails_12factor', group: :production
 
 gem 'deface', github: 'spree/deface'
 gem 'spree', '3.0.0'
@@ -69,4 +69,6 @@ gem 'spree_fairground', github: 'dstockdale/spree_fairground', branch: '3-0-stab
 # gem 'spree_summernote', path: '../spree_summernote'
 # gem 'spree_content', path: '../spree_content'
 # gem 'spree_fairground', path: '../spree_fairground'
+# gem 'spree_compose', path: '../spree_compose'
+
 

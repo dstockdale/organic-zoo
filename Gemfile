@@ -10,7 +10,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'puma'
 gem 'aws-sdk', '< 2.0'
 gem 'bootstrap-sass', '~> 3.3.1'
 
@@ -28,6 +27,7 @@ group :development do
   gem 'rb-fsevent', require: false
   gem 'rb-inotify', require: false
   gem 'spring-commands-rspec'
+  gem 'puma'
   gem 'foreman'
 end
 

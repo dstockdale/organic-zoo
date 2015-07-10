@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'aws-sdk', '< 2.0'
 gem 'bootstrap-sass', '~> 3.3.1'
+gem 'puma'
 
 group :production do
   gem 'newrelic_rpm'
@@ -28,7 +29,6 @@ group :development do
   gem 'rb-fsevent', require: false
   gem 'rb-inotify', require: false
   gem 'spring-commands-rspec'
-  gem 'puma'
   gem 'foreman'
 end
 

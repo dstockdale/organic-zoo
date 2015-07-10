@@ -10,6 +10,17 @@ GIT
       spree_frontend (~> 3.0.0.rc2)
 
 GIT
+  remote: git://github.com/dstockdale/spree_compose.git
+  revision: 463eed1f0d937517c7e3d8fb0e235804f25a07b5
+  branch: 3-0-stable
+  specs:
+    spree_compose (3.0.0)
+      spree_api (~> 3.0.0)
+      spree_backend (~> 3.0.0)
+      spree_core (~> 3.0.0)
+      spree_frontend (~> 3.0.0)
+
+GIT
   remote: git://github.com/dstockdale/spree_content.git
   revision: 513b0adb4af134f854ab06f1d2b30aadea7f60d7
   branch: 3-0-stable
@@ -581,6 +592,7 @@ DEPENDENCIES
   shoulda-matchers
   spree (= 3.0.0)
   spree_auth_devise!
+  spree_compose!
   spree_content!
   spree_fairground!
   spree_gateway!

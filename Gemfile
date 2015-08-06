@@ -12,11 +12,10 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'aws-sdk', '< 2.0'
 gem 'bootstrap-sass', '~> 3.3.1'
-gem 'puma', '~> 2.12.3'
 
 group :production do
   gem 'newrelic_rpm'
-  gem 'shelly-dependencies'
+  gem 'puma', '~> 2.12.3'
 end
 
 group :development do

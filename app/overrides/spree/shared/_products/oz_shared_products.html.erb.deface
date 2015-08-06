@@ -1,3 +1,4 @@
+<!-- replace '#products' -->
 <div id="products" class="row" data-hook>
   <% products.each do |product| %>
     <% url = spree.product_url(product, taxon_id: @taxon.try(:id)) %>

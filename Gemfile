@@ -16,6 +16,7 @@ gem 'puma', '~> 2.12.3'
 
 group :production do
   gem 'newrelic_rpm'
+  gem 'shelly-dependencies'
 end
 
 group :development do

@@ -12,10 +12,12 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'aws-sdk', '< 2.0'
 gem 'bootstrap-sass', '~> 3.3.1'
+gem 'dotenv-rails'
 
 group :production do
   gem 'newrelic_rpm'
   gem 'puma', '~> 2.12.3'
+  gem 'rails_12factor'
 end
 
 group :development do
@@ -46,7 +48,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'pry'
-  gem 'dotenv-rails'
 end
 
 # gem 'rails_12factor', group: :production
